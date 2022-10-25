@@ -54,7 +54,7 @@ RSpec.describe User, type: :model do
   end
 
 
-  describe "#login" do
+  describe ".authenticate_with_credentials" do
     it "Should authenticate user when  user types in a few spaces before and/or after their email address" do 
       @user = User.authenticate_with_credentials("    lowerline@gmail.com", "11112222AAAA###")
    
