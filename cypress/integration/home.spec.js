@@ -1,9 +1,4 @@
 
-
-
-
-
-
 describe('example to-do app', () => {
 
   beforeEach(() => {
