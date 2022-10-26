@@ -5,7 +5,7 @@ describe("product page", ()=>{
    
   })
 
-  it("Should give details of the product", ()=>{
+  it("Should navigate to product detail page", ()=>{
     cy.get(".products article").first()
     .click()
 
