@@ -1,7 +1,12 @@
 class OrdersController < ApplicationController
   before_action :authorize
   def show
-    @order = Order.find(params[:id])
+
+    @order = Order.find_by_id(params[:id])
+    if @order.nil?
+      return redirect_to "/"
+    end
+
     @list_of_items = LineItem.where(order_id: @order.id)
     @products = []
     @total_amount = 0
